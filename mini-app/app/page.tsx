@@ -1,5 +1,8 @@
 import { description, title } from "@/lib/metadata";
 import { generateMetadata } from "@/lib/farcaster-embed";
+import MediaUpload from "@/components/media-upload";
+import Chat from "@/components/chat";
+import VoiceChat from "@/components/voice-chat";
 
 export { generateMetadata };
 
@@ -9,6 +12,9 @@ export default function Home() {
     <main className="flex flex-col gap-3 place-items-center place-content-center px-4 grow">
       <span className="text-2xl">{title}</span>
       <span className="text-muted-foreground">{description}</span>
+      <MediaUpload />
+      <Chat />
+      <VoiceChat />
     </main>
   );
 }
